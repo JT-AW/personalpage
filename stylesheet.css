@@ -34,13 +34,13 @@ section{
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
 }
 .img3{
-    min-width: 200px;
+    min-width: 300px;
     width: 30%;
     height: 400px;  
     border-radius: 8px;
@@ -62,6 +62,7 @@ section{
     background: url(./artwork/dennys.JPG) no-repeat center /cover;
 }
 .content3{
+    min-width: 300px;
     width: 30%;
     height: 400px;
     margin: 0 10px;
