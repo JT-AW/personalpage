@@ -105,13 +105,55 @@ section{
     margin-left: -150px;
 }
 
-
 /* Settings for Art Panel */
+
+.artwork-grid{
+  display: grid; 
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'six'
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.img3:nth-child(1) {
+    grid-area: one;
+  }
+.img3:nth-child(2) {
+grid-area: two;
+}
+.img3:nth-child(3) {
+grid-area: three;
+}
+.img3:nth-child(4) {
+grid-area: four;
+}
+.img3:nth-child(5) {
+grid-area: five;
+}
+.content3 {
+grid-area: six;
+}
+
+@media (min-width: 50em){  
+    .artwork-grid{
+      grid-template-areas: 
+        'one six two'
+        'three four five';
+    }
+  }
+
 .img3{
-    width: clamp(300px, 30%, 500px);
-    height: 400px;  
+    min-height: 400px;  
     border-radius: 8px;
-    margin: 20px 10px;
 }
 #uno{
     background: url(./artwork/yourlove.JPG) no-repeat center /cover;
@@ -129,10 +171,6 @@ section{
     background: url(./artwork/dennys.JPG) no-repeat center /cover;
 }
 .content3{
-    min-width: 300px;
-    width: 30%;
-    height: 400px;
-    margin: 0 10px;
     background-color: var(--clr-primary);
     display: flex;
     align-items: center;
@@ -168,8 +206,5 @@ section{
         width: 80%;
         margin: 0;
         margin-top: -75px;
-    }
-    .img3, .content3{
-        width: 65%;
     }
 }
